@@ -1,10 +1,6 @@
-# BMP280 I2C driver on Raspberry Pi 4B (custom Buildroot image)
+# A minimal linux distro for raspberry pi 4b 
 
 A learning project: a minimal Buildroot Linux image for the Raspberry Pi 4B, plus a Linux I2C driver for the BMP280 temperature/pressure sensor, written step by step.
-
-Series on dev.to: _(add link)_
-
-> **Status:** Part 1, skeleton driver (registers with the I2C core, `probe()` and `remove()` print to `dmesg`). Chip ID, Device Tree and real readings come in later parts.
 
 ## Tested with
 
@@ -31,8 +27,6 @@ Series on dev.to: _(add link)_
 │   └── wpa_supplicant.conf.example   # copy and edit (see step 4)
 └── README.md
 ```
-
-`rasberrypi_overlay/etc/wpa_supplicant.conf` holds real Wi-Fi credentials, so it is **git-ignored**. You create it yourself from the example.
 
 ## Hardware
 
@@ -232,8 +226,3 @@ Use the same name you put in the driver's `i2c_device_id` table (shown here as `
 | Boot log stops at `Waiting for root device` | `root=` in `cmdline.txt` |
 | Garbled serial output | TX/RX crossed? baud 115200? |
 | No `/dev/i2c-1` | `dtparam=i2c_arm=on`, I2C kernel options, `modprobe` |
-
-## Notes
-
-- This is a learning project, not production code.
-- Do not commit `rasberrypi_overlay/etc/wpa_supplicant.conf` or any file with real credentials.
