@@ -1,6 +1,6 @@
 # A minimal linux distro for raspberry pi 4b 
 
-A learning project: a minimal Buildroot Linux image for the Raspberry Pi 4B, plus a Linux I2C driver for the BMP280 temperature/pressure sensor, written step by step.
+A learning project: a minimal Buildroot Linux image for the Raspberry Pi 4B.
 
 ## Tested with
 
